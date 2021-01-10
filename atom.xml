@@ -6,7 +6,7 @@
   <link href="https://neverlandsx.github.io/atom.xml" rel="self"/>
   
   <link href="https://neverlandsx.github.io/"/>
-  <updated>2021-01-10T03:49:59.158Z</updated>
+  <updated>2021-01-10T09:19:19.230Z</updated>
   <id>https://neverlandsx.github.io/</id>
   
   <author>
@@ -17,22 +17,9 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>test_my_site</title>
-    <link href="https://neverlandsx.github.io/2021/01/10/test-my-site/"/>
-    <id>https://neverlandsx.github.io/2021/01/10/test-my-site/</id>
-    <published>2021-01-10T03:49:59.000Z</published>
-    <updated>2021-01-10T03:49:59.158Z</updated>
-    
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
     <title>Latex的学习（1）</title>
-    <link href="https://neverlandsx.github.io/2021/01/10/hello-world/"/>
-    <id>https://neverlandsx.github.io/2021/01/10/hello-world/</id>
+    <link href="https://neverlandsx.github.io/2021/01/10/Latex%20study1/"/>
+    <id>https://neverlandsx.github.io/2021/01/10/Latex%20study1/</id>
     <published>2021-01-09T16:00:00.000Z</published>
     <updated>2021-01-10T09:19:19.230Z</updated>
     
