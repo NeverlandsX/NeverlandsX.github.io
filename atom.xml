@@ -34,12 +34,13 @@
     <link href="https://neverlandsx.github.io/2021/01/10/hello-world/"/>
     <id>https://neverlandsx.github.io/2021/01/10/hello-world/</id>
     <published>2021-01-09T16:00:00.000Z</published>
-    <updated>2021-01-10T08:12:09.064Z</updated>
+    <updated>2021-01-10T09:19:19.230Z</updated>
     
-    <content type="html"><![CDATA[<pre><code>对Latex的学习主要参考了刘海洋的《Latex入门》，下面将演练勾股定理pdf的使用。</code></pre><a id="more"></a><p>\title{勾股定理杂谈}</p>]]></content>
+    <content type="html"><![CDATA[<pre><code>对Latex的学习主要参考了刘海洋的《Latex入门》，下面将用勾股定理的pdf进行实操。使用的软件是Visual Studio Code,通过LaTeX Workshop 插件来实现Latex。</code></pre><a id="more"></a><p>%勾股定理<br>\documentclass[UTF8]{ctexart}<br>%————————————<br>\title{杂谈勾股定理}<br>\author{Zhangsan\Peking}<br>\date{\today}                      % \today 输出的是电脑的当日的时期<br>%以上信息仅是对文章信息提前申明，得通过\maketitle输出，maketitle的输出格式是固定的<br>%  /是转义字符；//为换行</p><p>\bibliographystyle{plain}          % \bibliographystyle 声明参考文献格式<br>% \begin 以上部分都称为导言区（premble）</p><p>%\begin 与 \end 之间为pdf的输出内容<br>\begin{document}</p><p>\maketitle                         %输出文章信息(前文定义的)<br>\tableofcontents                   %输出目录<br>\section{勾股定理在古代}            %开始新一节<br>\section{勾股定理的近代形式}<br>\bibliographystyle{math}           %从文献数据库math中获取文献信息，并输出</p><p>\end{document}</p>]]></content>
     
     
-    <summary type="html">&lt;pre&gt;&lt;code&gt;对Latex的学习主要参考了刘海洋的《Latex入门》，下面将演练勾股定理pdf的使用。&lt;/code&gt;&lt;/pre&gt;</summary>
+    <summary type="html">&lt;pre&gt;&lt;code&gt;对Latex的学习主要参考了刘海洋的《Latex入门》，下面将用勾股定理的pdf进行实操。
+使用的软件是Visual Studio Code,通过LaTeX Workshop 插件来实现Latex。&lt;/code&gt;&lt;/pre&gt;</summary>
     
     
     
