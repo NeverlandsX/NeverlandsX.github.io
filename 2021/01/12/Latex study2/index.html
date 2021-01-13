@@ -92,7 +92,7 @@
 <meta property="og:image" content="https://neverlandsx.github.io/2021/01/12/Latex%20study2/character.jpg">
 <meta property="og:image" content="https://neverlandsx.github.io/2021/01/12/Latex%20study2/character.jpg">
 <meta property="article:published_time" content="2021-01-11T16:00:00.000Z">
-<meta property="article:modified_time" content="2021-01-13T14:59:11.732Z">
+<meta property="article:modified_time" content="2021-01-13T15:24:59.457Z">
 <meta property="article:author" content="Mcphist">
 <meta property="article:tag" content="study">
 <meta property="article:tag" content="latex">
@@ -363,7 +363,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  462
+                  645
                 </span>
               
 
@@ -390,7 +390,7 @@
       
         <p>此篇参考了刘海洋的《Latex入门》和中国ctex用户小组翻译的《一份不太简短的latex2 介绍》。</p>
 <a id="more"></a>
-
+<p>#特殊字母及字符</p>
 <p>在Tex系统中已内置了部分的特殊字母输入方式，举个例子如：</p>
 <figure class="highlight taggerscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">caf<span class="symbol">\&#x27;</span>e <span class="symbol">\q</span>quad G<span class="symbol">\&quot;</span>odel <span class="symbol">\q</span>quad Anton<span class="symbol">\&#x27;</span>in Dvo<span class="symbol">\v</span>&#123;r&#125;<span class="symbol">\&#x27;</span>ak <span class="symbol">\q</span>quad <span class="symbol">\O</span> ster Vr<span class="symbol">\r</span>&#123;a&#125; <span class="symbol">\q</span>quad k<span class="symbol">\i</span> rka<span class="symbol">\u</span>&#123;g&#125;a<span class="symbol">\c</span>&#123;c&#125;                 <span class="variable">%注意有的特殊字母后面要加空格</span></span><br><span class="line"><span class="variable"> </span></span><br></pre></td></tr></table></figure>
 <img src="/2021/01/12/Latex%20study2/example1.jpg" class title="例子1">
@@ -407,6 +407,11 @@
 <p>上面代码中的最后一个输出的是’&#39;。<br>latex中任意多个空格仅起到一个空格作用；若宏命令由字母组成，则后面的空格不在文本中输出，若硬要输出空格在其后，应使用’\ ‘;若存在一种空格不允许被换行，使用’~’，像名称与编号之间。<br>特殊符号：</p>
 <figure class="highlight livescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">\S</span> <span class="string">\qquad</span> <span class="string">\dag</span> <span class="string">\qquad</span> <span class="string">\ddag</span> <span class="string">\qquad</span> <span class="string">\P</span></span><br><span class="line"></span><br><span class="line"><span class="string">\copyright</span> <span class="string">\qquad</span> <span class="string">\textregistered</span> <span class="string">\qquad</span> <span class="string">\texttrademark</span> <span class="string">\qquad</span> <span class="string">\pounds</span></span><br><span class="line"></span><br><span class="line"><span class="string">\textbullet</span></span><br></pre></td></tr></table></figure>
  <img src="/2021/01/12/Latex%20study2/character.jpg" class title="文本中的特殊字符">
+
+<p>#字体<br>命令有两种类型：\命令{文本} ;{\命令 文本}。第二种一般用于局部环境中。<br>预定义的字体族有三种，包括：罗马（\textrm{};\rmfamily）；无衬线(\textsf{};\sffamily)；打字机(\texttt{};\ttfamily)。<br>预定义的字体形状有四种，包括：直立（\textup{};\upshape），意大利（\textit{};\itshape），倾斜（\textsl{};\slshape），小型大写（\textsc{};\scshape）<br>预定义的字体粗细，包括：中等（\textmd{};\mdseries），加宽加粗（\textbf{};\bfseries）</p>
+<p>还有部分特殊的命令如下：将字体设为普通（\textnormal;\normalfont）；倾斜校正，防止斜体与其他字挨的过近（命令\textit,\textsl能自动进行;也可用’/‘手动校正）</p>
+<p>对于中文字体：{\CJKfamily{字体的拼音} }  或{\字体拼音}</p>
+
       
     </div>
     
@@ -636,7 +641,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">1.7k</span>
+    <span title="Site words total count">1.9k</span>
   
 </div>
 
