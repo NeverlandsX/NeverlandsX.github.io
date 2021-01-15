@@ -92,7 +92,7 @@
 <meta property="og:image" content="https://neverlandsx.github.io/2021/01/12/Latex%20study2/character.jpg">
 <meta property="og:image" content="https://neverlandsx.github.io/2021/01/12/Latex%20study2/character.jpg">
 <meta property="article:published_time" content="2021-01-11T16:00:00.000Z">
-<meta property="article:modified_time" content="2021-01-15T08:45:41.345Z">
+<meta property="article:modified_time" content="2021-01-15T10:45:50.792Z">
 <meta property="article:author" content="Mcphist">
 <meta property="article:tag" content="study">
 <meta property="article:tag" content="latex">
@@ -391,8 +391,7 @@
         <p>此篇参考了刘海洋的《Latex入门》和中国ctex用户小组翻译的《一份不太简短的latex2 介绍》。</p>
 <a id="more"></a>
 
-<p>#特殊字母及字符</p>
-<p>在Tex系统中已内置了部分的特殊字母输入方式，举个例子如：</p>
+<h1 id="特殊字母及字符"><a href="#特殊字母及字符" class="headerlink" title="特殊字母及字符"></a>特殊字母及字符</h1><p>在Tex系统中已内置了部分的特殊字母输入方式，举个例子如：</p>
 <figure class="highlight taggerscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">caf<span class="symbol">\&#x27;</span>e <span class="symbol">\q</span>quad G<span class="symbol">\&quot;</span>odel <span class="symbol">\q</span>quad Anton<span class="symbol">\&#x27;</span>in Dvo<span class="symbol">\v</span>&#123;r&#125;<span class="symbol">\&#x27;</span>ak <span class="symbol">\q</span>quad <span class="symbol">\O</span> ster Vr<span class="symbol">\r</span>&#123;a&#125; <span class="symbol">\q</span>quad k<span class="symbol">\i</span> rka<span class="symbol">\u</span>&#123;g&#125;a<span class="symbol">\c</span>&#123;c&#125;                 <span class="variable">%注意有的特殊字母后面要加空格</span></span><br><span class="line"><span class="variable"> </span></span><br></pre></td></tr></table></figure>
 <img src="/2021/01/12/Latex%20study2/example1.jpg" class title="例子1">
 
@@ -409,14 +408,12 @@
 <figure class="highlight livescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">\S</span> <span class="string">\qquad</span> <span class="string">\dag</span> <span class="string">\qquad</span> <span class="string">\ddag</span> <span class="string">\qquad</span> <span class="string">\P</span></span><br><span class="line"></span><br><span class="line"><span class="string">\copyright</span> <span class="string">\qquad</span> <span class="string">\textregistered</span> <span class="string">\qquad</span> <span class="string">\texttrademark</span> <span class="string">\qquad</span> <span class="string">\pounds</span></span><br><span class="line"></span><br><span class="line"><span class="string">\textbullet</span></span><br></pre></td></tr></table></figure>
  <img src="/2021/01/12/Latex%20study2/character.jpg" class title="文本中的特殊字符">
 
-<p>#字体</p>
-<p>命令有两种类型：\命令{文本} ;{\命令 文本}。第二种一般用于局部环境中。<br>预定义的字体族有三种，包括：罗马（\textrm{};\rmfamily）；无衬线(\textsf{};\sffamily)；打字机(\texttt{};\ttfamily)。<br>预定义的字体形状有四种，包括：直立（\textup{};\upshape），意大利（\textit{};\itshape），倾斜（\textsl{};\slshape），小型大写（\textsc{};\scshape）<br>预定义的字体粗细，包括：中等（\textmd{};\mdseries），加宽加粗（\textbf{};\bfseries）</p>
+<h1 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h1><p>命令有两种类型：\命令{文本} ;{\命令 文本}。第二种一般用于局部环境中。<br>预定义的字体族有三种，包括：罗马（\textrm{};\rmfamily）；无衬线(\textsf{};\sffamily)；打字机(\texttt{};\ttfamily)。<br>预定义的字体形状有四种，包括：直立（\textup{};\upshape），意大利（\textit{};\itshape），倾斜（\textsl{};\slshape），小型大写（\textsc{};\scshape）<br>预定义的字体粗细，包括：中等（\textmd{};\mdseries），加宽加粗（\textbf{};\bfseries）</p>
 <p>还有部分特殊的命令如下：将字体设为普通（\textnormal;\normalfont）；倾斜校正，防止斜体与其他字挨的过近（命令\textit,\textsl能自动进行;也可用’/‘手动校正）</p>
 <p>对于中文字体：{\CJKfamily{字体的拼音} }  或{\字体拼音}</p>
 <p>对西文和数学支持最好的免费字体宏包为txfonts。</p>
-<p>##强调文字</p>
-<p>\emph{};{\em }:将文字变为意大利体<br>\underline{}:加下划线<br>在CJKfntef宏包中，中文也有类似命令：\CJKunderdot(下加点)；\CJKunderline<br>；\CJKunderblline(加双下划线);CJKsout(删除线) 等</p>
-<p>##字号<br>内置了十种大小：\tiny;\scriptsize;\footnotesize;\small;\normalsiza;\large;\Large;\LARGE;\huge;\Huge<br>对于中文也可用字号的命令声明：\zihao1{数字}。数字可选0-8，加个负号代表小（如小四） </p>
+<h2 id="强调文字"><a href="#强调文字" class="headerlink" title="强调文字"></a>强调文字</h2><p>\emph{};{\em }:将文字变为意大利体<br>\underline{}:加下划线<br>在CJKfntef宏包中，中文也有类似命令：\CJKunderdot(下加点)；\CJKunderline<br>；\CJKunderblline(加双下划线);CJKsout(删除线) 等</p>
+<h2 id="字号"><a href="#字号" class="headerlink" title="字号"></a>字号</h2><p>内置了十种大小：\tiny;\scriptsize;\footnotesize;\small;\normalsiza;\large;\Large;\LARGE;\huge;\Huge<br>对于中文也可用字号的命令声明：\zihao1{数字}。数字可选0-8，加个负号代表小（如小四） </p>
 
       
     </div>
@@ -525,8 +522,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -616,6 +622,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%89%B9%E6%AE%8A%E5%AD%97%E6%AF%8D%E5%8F%8A%E5%AD%97%E7%AC%A6"><span class="nav-number">1.</span> <span class="nav-text">特殊字母及字符</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AD%97%E4%BD%93"><span class="nav-number">2.</span> <span class="nav-text">字体</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%BA%E8%B0%83%E6%96%87%E5%AD%97"><span class="nav-number">2.1.</span> <span class="nav-text">强调文字</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%97%E5%8F%B7"><span class="nav-number">2.2.</span> <span class="nav-text">字号</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
