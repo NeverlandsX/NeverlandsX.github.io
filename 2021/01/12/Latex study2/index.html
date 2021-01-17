@@ -91,8 +91,9 @@
 <meta property="og:image" content="https://neverlandsx.github.io/2021/01/12/Latex%20study2/example1.jpg">
 <meta property="og:image" content="https://neverlandsx.github.io/2021/01/12/Latex%20study2/character.jpg">
 <meta property="og:image" content="https://neverlandsx.github.io/2021/01/12/Latex%20study2/character.jpg">
+<meta property="og:image" content="https://neverlandsx.github.io/2021/01/12/Latex%20study2/list.jpg">
 <meta property="article:published_time" content="2021-01-11T16:00:00.000Z">
-<meta property="article:modified_time" content="2021-01-15T10:45:50.792Z">
+<meta property="article:modified_time" content="2021-01-17T03:19:24.244Z">
 <meta property="article:author" content="Mcphist">
 <meta property="article:tag" content="study">
 <meta property="article:tag" content="latex">
@@ -363,7 +364,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  765
+                  1.3k
                 </span>
               
 
@@ -414,7 +415,26 @@
 <p>对西文和数学支持最好的免费字体宏包为txfonts。</p>
 <h2 id="强调文字"><a href="#强调文字" class="headerlink" title="强调文字"></a>强调文字</h2><p>\emph{};{\em }:将文字变为意大利体<br>\underline{}:加下划线<br>在CJKfntef宏包中，中文也有类似命令：\CJKunderdot(下加点)；\CJKunderline<br>；\CJKunderblline(加双下划线);CJKsout(删除线) 等</p>
 <h2 id="字号"><a href="#字号" class="headerlink" title="字号"></a>字号</h2><p>内置了十种大小：\tiny;\scriptsize;\footnotesize;\small;\normalsiza;\large;\Large;\LARGE;\huge;\Huge<br>对于中文也可用字号的命令声明：\zihao1{数字}。数字可选0-8，加个负号代表小（如小四） </p>
-
+<h1 id="行距与水平间距"><a href="#行距与水平间距" class="headerlink" title="行距与水平间距"></a>行距与水平间距</h1><h2 id="行距"><a href="#行距" class="headerlink" title="行距"></a>行距</h2><p>命令：\linespread{因子} 当因子为1时，为默认值：对于一般文档默认为1.2倍字体大小；对于中文字体，默认为1.3倍</p>
+<h2 id="水平间距"><a href="#水平间距" class="headerlink" title="水平间距"></a>水平间距</h2><p>水平间距调整有两种，可以换行的与不可以换行的。(em代表代表一个大写M的宽度)<br>不可以换行的：</p>
+<figure class="highlight livescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">\thinspace</span> 或<span class="string">\,</span>          <span class="number">0.1667em</span></span><br><span class="line"><span class="string">\negthinpace</span>            -<span class="number">0.1667em</span></span><br><span class="line"><span class="string">\enspace</span>                 <span class="number">0.5em</span></span><br><span class="line"><span class="string">\nobreakspace</span> 或 ~       空格</span><br></pre></td></tr></table></figure>
+<p>可以换行的：</p>
+<figure class="highlight livescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">\quad</span>                    <span class="number">1em</span></span><br><span class="line"><span class="string">\qquad</span>                   <span class="number">2em</span></span><br><span class="line"><span class="string">\enskip</span>                  <span class="number">0.5em</span></span><br><span class="line"><span class="string">\空格</span>                    空格</span><br></pre></td></tr></table></figure>
+<p>使用’\hspace{长度}’可以指定具体长度如’\hspace{1cm}’<br>也可使用’\hspace{}’产生可伸缩的橡皮长度:<br>{}内的内容为：</p>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;普通长度 <span class="keyword">plus</span> 可伸长长度 <span class="keyword">minus</span> 可缩短长度&#125;</span><br></pre></td></tr></table></figure>
+<p>\mbox{}或\makebox[宽度][对齐参数]{}:产生一个盒子，对齐参数可选：c(中)，l(左)，r(右),s(分散)；宽度要带单位</p>
+<h1 id="段落"><a href="#段落" class="headerlink" title="段落"></a>段落</h1><h2 id="对齐"><a href="#对齐" class="headerlink" title="对齐"></a>对齐</h2><p>\raggedright ：左对齐<br>\raggedleft  ：右对齐<br>\centering   ：居中<br>利用lettrine宏包可以产生首字下沉效果。具体命令为’\lettrine{字母}’</p>
+<h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><p>环境包括:quote(单段引用，无缩进);quotation(多段引用，有缩进);verse(诗歌);abstract（摘要）……</p>
+<h3 id="列表环境"><a href="#列表环境" class="headerlink" title="列表环境"></a>列表环境</h3><p>enumerate(编号的列表环境);itemize(不编号的列表环境);description(使用关键字的的列表环境)；<br>列表环境的举例：</p>
+<figure class="highlight livescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">\begin&#123;enumerate&#125;</span></span><br><span class="line">    <span class="string">\item</span> q</span><br><span class="line">    <span class="string">\item</span> w</span><br><span class="line">    <span class="string">\begin&#123;itemize&#125;</span></span><br><span class="line">        <span class="string">\item</span> m</span><br><span class="line">        <span class="string">\item</span> n</span><br><span class="line">    <span class="string">\end&#123;itemize&#125;</span></span><br><span class="line">    <span class="string">\begin&#123;description&#125;</span></span><br><span class="line">        <span class="string">\item[g]</span> j</span><br><span class="line">        <span class="string">\item[f]</span> k</span><br><span class="line">    <span class="string">\end&#123;description&#125;</span></span><br><span class="line"><span class="string">\end&#123;enumerate&#125;</span></span><br></pre></td></tr></table></figure>
+<p>结果：</p>
+<img src="/2021/01/12/Latex%20study2/list.jpg" class title="列表环境">
+<h3 id="定理类环境"><a href="#定理类环境" class="headerlink" title="定理类环境"></a>定理类环境</h3><p>在导言区可以自定义一个定理环境：’\newtheorem{定理名字}{定理的抬头}[计数器参数]’，计数器参数可以为’chapter’，表示按章节编号。<br>\theoremstyle{格式}可以用于选择定理格式，具体格式在此不一一列出。<br>在正文就可以使用’定理名字’开辟自定义的定理环境。</p>
+<h3 id="抄录与代码环境"><a href="#抄录与代码环境" class="headerlink" title="抄录与代码环境"></a>抄录与代码环境</h3><p>‘\verb符号 内容 符号’：用自定义的符号来表示开始和结束<br>大段的抄录可使用</p>
+<figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">\<span class="keyword">begin</span>&#123;<span class="keyword">verbatim</span>&#125;</span><br><span class="line">\<span class="keyword">end</span>&#123;<span class="keyword">verbatim</span>&#125;</span><br></pre></td></tr></table></figure>
+<p>代码环境比抄录环境多了一个高亮的需求。需要使用宏包’lstlistings’<br>使用如下：</p>
+<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">\<span class="keyword">begin</span>&#123;lstlistings&#125;[<span class="keyword">language</span>=语言]  %语言可填为<span class="string">&#x27;C++&#x27;</span>等</span><br><span class="line">\<span class="keyword">end</span>&#123;lstlistings&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="制表环境"><a href="#制表环境" class="headerlink" title="制表环境"></a>制表环境</h3>
       
     </div>
     
@@ -632,7 +652,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%89%B9%E6%AE%8A%E5%AD%97%E6%AF%8D%E5%8F%8A%E5%AD%97%E7%AC%A6"><span class="nav-number">1.</span> <span class="nav-text">特殊字母及字符</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AD%97%E4%BD%93"><span class="nav-number">2.</span> <span class="nav-text">字体</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%BA%E8%B0%83%E6%96%87%E5%AD%97"><span class="nav-number">2.1.</span> <span class="nav-text">强调文字</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%97%E5%8F%B7"><span class="nav-number">2.2.</span> <span class="nav-text">字号</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%89%B9%E6%AE%8A%E5%AD%97%E6%AF%8D%E5%8F%8A%E5%AD%97%E7%AC%A6"><span class="nav-number">1.</span> <span class="nav-text">特殊字母及字符</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AD%97%E4%BD%93"><span class="nav-number">2.</span> <span class="nav-text">字体</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%BA%E8%B0%83%E6%96%87%E5%AD%97"><span class="nav-number">2.1.</span> <span class="nav-text">强调文字</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%97%E5%8F%B7"><span class="nav-number">2.2.</span> <span class="nav-text">字号</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%A1%8C%E8%B7%9D%E4%B8%8E%E6%B0%B4%E5%B9%B3%E9%97%B4%E8%B7%9D"><span class="nav-number">3.</span> <span class="nav-text">行距与水平间距</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A1%8C%E8%B7%9D"><span class="nav-number">3.1.</span> <span class="nav-text">行距</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B0%B4%E5%B9%B3%E9%97%B4%E8%B7%9D"><span class="nav-number">3.2.</span> <span class="nav-text">水平间距</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%AE%B5%E8%90%BD"><span class="nav-number">4.</span> <span class="nav-text">段落</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%B9%E9%BD%90"><span class="nav-number">4.1.</span> <span class="nav-text">对齐</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%8E%AF%E5%A2%83"><span class="nav-number">4.2.</span> <span class="nav-text">环境</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%97%E8%A1%A8%E7%8E%AF%E5%A2%83"><span class="nav-number">4.2.1.</span> <span class="nav-text">列表环境</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9A%E7%90%86%E7%B1%BB%E7%8E%AF%E5%A2%83"><span class="nav-number">4.2.2.</span> <span class="nav-text">定理类环境</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8A%84%E5%BD%95%E4%B8%8E%E4%BB%A3%E7%A0%81%E7%8E%AF%E5%A2%83"><span class="nav-number">4.2.3.</span> <span class="nav-text">抄录与代码环境</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%B6%E8%A1%A8%E7%8E%AF%E5%A2%83"><span class="nav-number">4.2.4.</span> <span class="nav-text">制表环境</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -673,7 +693,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">2k</span>
+    <span title="Site words total count">2.6k</span>
   
 </div>
 
