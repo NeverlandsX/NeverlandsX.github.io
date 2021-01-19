@@ -6,7 +6,7 @@
   <link href="https://neverlandsx.github.io/atom.xml" rel="self"/>
   
   <link href="https://neverlandsx.github.io/"/>
-  <updated>2021-01-19T03:10:18.121Z</updated>
+  <updated>2021-01-19T03:15:00.442Z</updated>
   <id>https://neverlandsx.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://neverlandsx.github.io/2021/01/19/Latex%20study3/"/>
     <id>https://neverlandsx.github.io/2021/01/19/Latex%20study3/</id>
     <published>2021-01-18T16:00:00.000Z</published>
-    <updated>2021-01-19T03:10:18.121Z</updated>
+    <updated>2021-01-19T03:15:00.442Z</updated>
     
     <content type="html"><![CDATA[<p>参考了刘海洋的《Latex入门》，本篇介绍了Latex中的一些便捷的自动化工具的使用,在管理bib格式的数据库推荐开源软件JabRef。</p><a id="more"></a><h1 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h1><p>Latex能自动收集章节命令所定义的标题，用’\tableofcontents’输出，但要<strong>连续编译两遍</strong>。<br>一般使用第三方宏包’tocloft’和’titletoc’来修改目录的样式。</p><h1 id="交叉引用"><a href="#交叉引用" class="headerlink" title="交叉引用"></a>交叉引用</h1><p>交叉引用由两部分组成：定义标签和引用标签。<br>定义标签：是为了标识此处，以便后面引用，其命令为’\label{标签}’，标签的命名一般采用有意义的缩写(如’sec:lang’;’eq:lang’)，放置位置位于生成该对象命令（类似’\section,\item’）的后面，或者环境内部，或脚注内容内部，或者公式后方且’\‘前方。<br>引用标签：有两个命令:’\ref{标签}’和’\pageref{标签}’，前者引用的是标签的编号，后者引用的是标签所在页码。<br>利用宏包’hyperref’中的命令’\autoref’可以实现<strong>自动填写标签名称</strong>的功能，在另一方面，该宏包还提供了<strong>超链接</strong>的功能。<br>利用宏包’nameref’中的命令’\nameref’引用的是对象的<strong>标题名称</strong>。</p><h1 id="文献数据库"><a href="#文献数据库" class="headerlink" title="文献数据库"></a>文献数据库</h1><h2 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h2><p>Bibtex相当于用于处理文献数据库内容引用的处理器。能被bibtex处理的文献数据库是’.bib’格式的，一般期刊网站会提供这种引用格式，没必要自己输入。<br>    1. 在导言区内设定文献引用格式：\bibliographystyle{格式}’，基本的格式包括plain,unsrt,alpha,abbrv。其区别如下：</p><img src="/2021/01/19/Latex%20study3/bibstyle.jpg" class title="引用格式区别"><pre><code>2. 在正文中使用&#39;\cite&#123;&#125;&#39;引用文献或使用&#39;\nocite&#123;&#125;&#39;列出不引用还仍需列出的参考文献。3. 使用&#39;\bibliography&#123;数据库名称1,数据库名称2,...&#125;&#39;</code></pre><h2 id="文献格式的自定义"><a href="#文献格式的自定义" class="headerlink" title="文献格式的自定义"></a>文献格式的自定义</h2><p>通过宏包’natbib’来进行格式的定制。</p>]]></content>
     
