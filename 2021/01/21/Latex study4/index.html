@@ -88,12 +88,22 @@
 <meta property="og:site_name" content="Mcphist の Blog">
 <meta property="og:description" content="本章将介绍数学公式方面的使用。">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://neverlandsx.github.io/2021/01/21/Latex%20study4/%5E%E4%B8%8E_.jpg">
+<meta property="og:image" content="https://neverlandsx.github.io/2021/01/21/Latex%20study4/%E7%9F%A9%E9%98%B5%E7%8E%AF%E5%A2%83.jpg">
+<meta property="og:image" content="https://neverlandsx.github.io/2021/01/21/Latex%20study4/sum.jpg">
+<meta property="og:image" content="https://neverlandsx.github.io/2021/01/21/Latex%20study4/%E5%B0%8F%E5%86%99%E5%B8%8C%E8%85%8A%E5%AD%97%E6%AF%8D.jpg">
+<meta property="og:image" content="https://neverlandsx.github.io/2021/01/21/Latex%20study4/%E5%A4%A7%E5%86%99%E5%B8%8C%E8%85%8A%E5%AD%97%E6%AF%8D.jpg">
+<meta property="og:image" content="https://neverlandsx.github.io/2021/01/21/Latex%20study4/%E6%95%B0%E5%AD%A6%E6%A8%A1%E5%BC%8F%E9%87%8D%E9%9F%B3.jpg">
+<meta property="og:image" content="https://neverlandsx.github.io/2021/01/21/Latex%20study4/%E4%BA%8C%E5%85%83%E5%85%B3%E7%B3%BB%E7%AE%97%E7%AC%A6.jpg">
+<meta property="og:image" content="https://neverlandsx.github.io/2021/01/21/Latex%20study4/%E5%A4%A7%E5%B0%BA%E5%AF%B8%E7%AE%97%E7%AC%A6.jpg">
+<meta property="og:image" content="https://neverlandsx.github.io/2021/01/21/Latex%20study4/%E5%85%B6%E4%BB%96%E7%AC%A6%E5%8F%B7.jpg">
 <meta property="article:published_time" content="2021-01-20T16:00:00.000Z">
-<meta property="article:modified_time" content="2021-01-21T14:42:04.625Z">
+<meta property="article:modified_time" content="2021-01-21T15:10:20.716Z">
 <meta property="article:author" content="Mcphist">
 <meta property="article:tag" content="study">
 <meta property="article:tag" content="latex">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://neverlandsx.github.io/2021/01/21/Latex%20study4/%5E%E4%B8%8E_.jpg">
 
 
 
@@ -359,7 +369,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  593
+                  573
                 </span>
               
 
@@ -386,28 +396,43 @@
       
         <p>本章将介绍数学公式方面的使用。</p>
 <a id="more"></a>
-<p>行内公式：$数学公式$；(数学公式)<br>行间公式：[数学公式] ；\begin{equation}…\end{equation}</p>
+
+<p>行内公式：’$数学公式$’；’(数学公式)‘<br>行间公式：’[数学公式]‘；’\begin{equation}…\end{equation}’</p>
 <p>最通用的数学宏包为amsmath</p>
 <p>使用’\text{}’在公式内插入文字,例如：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#96;&#96;&#96;</span><br><span class="line"></span><br><span class="line">leqno(左侧编号);reqno(右侧编号);fleqn(固定缩进不局中)</span><br><span class="line"></span><br><span class="line">上标：^&#123;&#125;</span><br><span class="line">下标：_&#123;&#125;</span><br><span class="line">举例：</span><br></pre></td></tr></table></figure>
-<pre><code>$A_i^k=3^&#123;3^&#123;\cdot^&#123;\cdot^3&#125;&#125;&#125;$</code></pre>
-<figure class="highlight taggerscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&#123;<span class="variable">% asset_img ^与_.jpg ^与_ %</span>&#125;</span><br><span class="line"></span><br><span class="line">算符的上下标一般默认在算符正上下方（除积分算符等个别算符在右上下角），也可使用&#x27;<span class="symbol">\n</span>olimits&#x27;使其出现于角上（例：<span class="symbol">\n</span>olimuts_biao），与之相对应的是&#x27;<span class="symbol">\l</span>imits&#x27;使其出现于正上下。</span><br><span class="line">若有左侧上下标，使用mathtools宏包工具中的&#x27;<span class="symbol">\p</span>rescript&#123;左上标&#125;&#123;左下标&#125; 元素&#x27;。</span><br><span class="line">对于化学式的书写采用mhchem宏包可简化书写：<span class="symbol">\c</span>e&#123;化学式或等式&#125;。（化学式例：H20）</span><br><span class="line"></span><br><span class="line">上划线：<span class="symbol">\o</span>verline&#123;&#125;</span><br><span class="line">下划线：<span class="symbol">\u</span>nderline&#123;&#125;</span><br><span class="line"></span><br><span class="line">上左箭头：<span class="symbol">\o</span>verleftarrow&#123;&#125;</span><br><span class="line">其他的箭头与上类似</span><br><span class="line"></span><br><span class="line">上花括号：<span class="symbol">\o</span>verbrace&#123;&#125;</span><br><span class="line">下花括号：<span class="symbol">\u</span>nderbrace&#123;&#125;</span><br><span class="line"></span><br><span class="line">分式：<span class="symbol">\f</span>rac&#123;分子&#125;&#123;分母&#125;</span><br><span class="line">若写成&#x27;<span class="symbol">\f</span>rac 12&#x27;,则输出的是1/2</span><br><span class="line"></span><br><span class="line">n次根式：<span class="symbol">\s</span>qrt[n]&#123;&#125;</span><br><span class="line"></span><br><span class="line">矩阵环境：分列用&#x27;&amp;&#x27;，分行用&#x27;<span class="symbol">\\</span>&#x27;。横着的省略号用&#x27;<span class="symbol">\d</span>ots&#x27;，竖省略号用&#x27;<span class="symbol">\v</span>dots&#x27;,斜着的省略号用&#x27;<span class="symbol">\d</span>dots&#x27;。</span><br><span class="line">&#123;<span class="variable">% asset_img 矩阵环境.jpg 矩阵环境的种类%</span>&#125;</span><br><span class="line">在行内公式，如果要使用与字体方格相同高度的小矩阵，可以amsmath中的smallmatrix。</span><br><span class="line">在求和符号的下限若有好几行，可用矩阵环境&#x27;<span class="symbol">\s</span>ubstack&#123;&#125;&#x27;输出单列的无括号矩阵，例</span><br></pre></td></tr></table></figure>
-<p>[ \sum_{\substack{0&lt;i&lt;n \ 0&lt;j&lt;1}} ]</p>
-<pre><code>&#123;% asset_img sum.jpg 下标中的矩阵环境%&#125;
-小写希腊字母：
-&#123;% asset_img 小写希腊字母.jpg 小写希腊字母%&#125;
-大写希腊字母：
-&#123;% asset_img 大写希腊字母.jpg 大写希腊字母%&#125;
-数学模式的重音：
-&#123;% asset_img 数学模式重音.jpg 数学模式的重音%&#125;
-二元关系算符：
-&#123;% asset_img 二元关系算符.jpg 二元关系算符%&#125;
-大尺寸算符的表达：
-&#123;% asset_img 大尺寸算符.jpg 大尺寸算符%&#125;
-其他符号:
-&#123;% asset_img 其他符号.jpg 其他符号%&#125;
+<figure class="highlight mel"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$\<span class="keyword">text</span>&#123;减数&#125;-\<span class="keyword">text</span>&#123;numbers&#125;$</span><br></pre></td></tr></table></figure>
+<p>leqno(左侧编号);reqno(右侧编号);fleqn(固定缩进不局中)</p>
+<p>上标：^{}<br>下标：_{}<br>举例：</p>
+<figure class="highlight parser3"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$A_i</span><span class="keyword">^k</span><span class="xml">=</span><span class="number">3</span><span class="xml">^&#123;</span><span class="number">3</span><span class="xml">^&#123;\cdot^&#123;\cdot</span><span class="keyword">^3</span><span class="xml">&#125;&#125;&#125;$</span></span><br></pre></td></tr></table></figure>
+<img src="/2021/01/21/Latex%20study4/%5E%E4%B8%8E_.jpg" class title="^与_">
 
-</code></pre>
+<p>算符的上下标一般默认在算符正上下方（除积分算符等个别算符在右上下角），也可使用’\nolimits’使其出现于角上（例：\nolimuts_biao），与之相对应的是’\limits’使其出现于正上下。<br>若有左侧上下标，使用mathtools宏包工具中的’\prescript{左上标}{左下标} 元素’。<br>对于化学式的书写采用mhchem宏包可简化书写：\ce{化学式或等式}。（化学式例：H20）</p>
+<p>上划线：\overline{}<br>下划线：\underline{}</p>
+<p>上左箭头：\overleftarrow{}<br>其他的箭头与上类似</p>
+<p>上花括号：\overbrace{}<br>下花括号：\underbrace{}</p>
+<p>分式：\frac{分子}{分母}<br>若写成’\frac 12’,则输出的是1/2</p>
+<p>n次根式：\sqrt[n]{}</p>
+<p>矩阵环境：分列用’&amp;’，分行用’\‘。横着的省略号用’\dots’，竖省略号用’\vdots’,斜着的省略号用’\ddots’。</p>
+<img src="/2021/01/21/Latex%20study4/%E7%9F%A9%E9%98%B5%E7%8E%AF%E5%A2%83.jpg" class title="矩阵环境的种类">
+<p>在行内公式，如果要使用与字体方格相同高度的小矩阵，可以amsmath中的smallmatrix。<br>在求和符号的下限若有好几行，可用矩阵环境’\substack{}’输出单列的无括号矩阵，例</p>
+<figure class="highlight taggerscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">\[</span> <span class="symbol">\s</span>um_&#123;<span class="symbol">\s</span>ubstack&#123;0&lt;i&lt;n <span class="symbol">\\</span> 0&lt;j&lt;1&#125;&#125; <span class="symbol">\]</span></span><br></pre></td></tr></table></figure>
+<img src="/2021/01/21/Latex%20study4/sum.jpg" class title="下标中的矩阵环境">
+<p>小写希腊字母：</p>
+<img src="/2021/01/21/Latex%20study4/%E5%B0%8F%E5%86%99%E5%B8%8C%E8%85%8A%E5%AD%97%E6%AF%8D.jpg" class title="小写希腊字母">
+<p>大写希腊字母：</p>
+<img src="/2021/01/21/Latex%20study4/%E5%A4%A7%E5%86%99%E5%B8%8C%E8%85%8A%E5%AD%97%E6%AF%8D.jpg" class title="大写希腊字母">
+<p>数学模式的重音：</p>
+<img src="/2021/01/21/Latex%20study4/%E6%95%B0%E5%AD%A6%E6%A8%A1%E5%BC%8F%E9%87%8D%E9%9F%B3.jpg" class title="数学模式的重音">
+<p>二元关系算符：</p>
+<img src="/2021/01/21/Latex%20study4/%E4%BA%8C%E5%85%83%E5%85%B3%E7%B3%BB%E7%AE%97%E7%AC%A6.jpg" class title="二元关系算符">
+<p>大尺寸算符的表达：</p>
+<img src="/2021/01/21/Latex%20study4/%E5%A4%A7%E5%B0%BA%E5%AF%B8%E7%AE%97%E7%AC%A6.jpg" class title="大尺寸算符">
+<p>其他符号:</p>
+<img src="/2021/01/21/Latex%20study4/%E5%85%B6%E4%BB%96%E7%AC%A6%E5%8F%B7.jpg" class title="其他符号">
+
+<p>定界符：\left括号 \right括号 （例：\left[  ）。可使括号随内容大小变化。</p>
+<p>在euqation环境内是无法换行的，因此要改用gather环境才能用’\‘换行,也能通过’\notag’不进行编号计数。<br>multline环境：同样是可以换行的环境,但其第一行左对齐，中间的居中，最后一行右对齐。<br>split环境：可以自动拆分单个公式为多行，编号由整个公式环境产生。</p>
+<p>cases环境：使用花括号表示几种不同情况。用’&amp;’分割条件与公式。</p>
 
       
     </div>
