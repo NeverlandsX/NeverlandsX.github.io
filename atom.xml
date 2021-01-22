@@ -44,9 +44,9 @@
     <link href="https://neverlandsx.github.io/2021/01/21/Latex%20study5/"/>
     <id>https://neverlandsx.github.io/2021/01/21/Latex%20study5/</id>
     <published>2021-01-20T16:00:00.000Z</published>
-    <updated>2021-01-21T15:17:40.076Z</updated>
+    <updated>2021-01-22T05:52:03.034Z</updated>
     
-    <content type="html"><![CDATA[<p>这篇是最后一篇，描述了图像与表格的插入。</p><a id="more"></a>]]></content>
+    <content type="html"><![CDATA[<p>这篇是最后一篇，描述了图像与表格的插入。</p><a id="more"></a><h1 id="制表"><a href="#制表" class="headerlink" title="制表"></a>制表</h1><p>一般采用tabular环境排版表格。同样的也是’\‘换行，’&amp;’换列，在行与行之间添加’\hline’代表加一横线。其具体使用格式为：</p><figure class="highlight dust"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml">\begin</span><span class="template-variable">&#123;tabular&#125;</span><span class="xml">[垂直对齐]</span><span class="template-variable">&#123;列格式说明&#125;</span></span><br></pre></td></tr></table></figure><pre><code>垂直对齐参数:t   按表格顶部对齐；b   按表格底部对齐；默认   垂直居中列格式说明：要对每列进行说明(例：r|r代表两列都右对齐，中间有竖线）。r代表右对齐；l代表左对齐；c代表居中；p&#123;宽度&#125;代表固定列宽；@&#123;内容&#125;代表添加内容代替格子（可用于小数点对齐，当内容为小数点时）。|代表加竖线.</code></pre><p>表格单元的合并：\multicolumn{项数}{新单元格式}{内容}</p><p>划指定长度横线：\cline{起始列数-终止列数}</p><p>三线表：使用booktabs宏包得到不同粗细的表格线：\toprule画顶部粗线；\midrule画中间细线;\bottomrule画底部粗线，\cmidlerule画中间很细（比midrule细）的分割线。</p><h1 id="插图"><a href="#插图" class="headerlink" title="插图"></a>插图</h1><p>基本宏包为graphics或graphicx(下面以此为例)。<br>插图命令：\incliudegraphics[参数]{文件名}     参数内可填写高度，宽度，或旋转角度</p><h1 id="浮动体"><a href="#浮动体" class="headerlink" title="浮动体"></a>浮动体</h1><p>两种浮动环境：figure和table<br>例;</p><figure class="highlight dust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml">\begin</span><span class="template-variable">&#123;浮动环境&#125;</span><span class="template-variable">&#123;允许位置&#125;</span></span><br><span class="line"><span class="xml">\end</span><span class="template-variable">&#123;&#125;</span></span><br></pre></td></tr></table></figure><p>允许位置（可按优先级填好几个）：h  此处；t  页面顶部；b  页面底部；p  独立一页</p>]]></content>
     
     
     <summary type="html">&lt;p&gt;这篇是最后一篇，描述了图像与表格的插入。&lt;/p&gt;</summary>
