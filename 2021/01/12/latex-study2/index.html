@@ -486,10 +486,10 @@
 <h1 id="特殊字母及字符"><a href="#特殊字母及字符" class="headerlink" title="特殊字母及字符"></a>特殊字母及字符</h1><p>在Tex系统中已内置了部分的特殊字母输入方式，举个例子如：</p>
 <pre class="line-numbers language-none"><code class="language-none">caf\&#39;e \qquad G\&quot;odel \qquad Anton\&#39;in Dvo\v&#123;r&#125;\&#39;ak \qquad \O ster Vr\r&#123;a&#125; \qquad k\i rka\u&#123;g&#125;a\c&#123;c&#125;                 %注意有的特殊字母后面要加空格
  <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
+<img src="/2021/01/12/latex-study2/example1.jpg" class="" title="例子1">
 
 <p>系统内默认的特殊字符的输入方式：</p>
-
+<img src="/2021/01/12/latex-study2/character.jpg" class="special" title="特殊字符">
 
 <p>若是还要其他未覆盖的字母需要输入时，就要使用babel宏包，调用命令为</p>
 <pre class="line-numbers language-none"><code class="language-none">\usepackage[language]&#123;babel&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
@@ -508,7 +508,7 @@
 \copyright \qquad \textregistered \qquad \texttrademark \qquad \pounds
 
 \textbullet<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
- 
+ <img src="/2021/01/12/latex-study2/character.jpg" class="" title="文本中的特殊字符">
 <h1 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h1><pre><code>命令有两种类型：\命令&#123;文本&#125; ;&#123;\命令 文本&#125;。第二种一般用于局部环境中。
 预定义的字体族有三种，包括：罗马（\textrm&#123;&#125;;\rmfamily）；无衬线(\textsf&#123;&#125;;\sffamily)；打字机(\texttt&#123;&#125;;\ttfamily)。
 预定义的字体形状有四种，包括：直立（\textup&#123;&#125;;\upshape），意大利（\textit&#123;&#125;;\itshape），倾斜（\textsl&#123;&#125;;\slshape），小型大写（\textsc&#123;&#125;;\scshape）
@@ -563,7 +563,7 @@
 \end&#123;lstlistings&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <h3 id="制表环境"><a href="#制表环境" class="headerlink" title="制表环境"></a>制表环境</h3><p>命令为:tabbing<br>‘\‘用于换行 ‘=‘用于设置指标位（相当于换列）’&gt;‘跳至下一格<br> 注意的是原本的重音表示被制表环境中命令覆盖，使用重音时应改为’\a加原本命令’。</p>
 <h3 id="脚注"><a href="#脚注" class="headerlink" title="脚注"></a>脚注</h3><p>使用’\footnote{脚注}’产生自动编号的脚注。<br>*在盒子与表格中不能直接使用，在环境中需使用’\footnotemark[数字]’产生编号和在环境后使用’\footnotetext[数字]{内容}’。<br>*在标题中和图题中使用，如下’\protect\footnote’。</p>
-<h1 id="总体排版"><a href="#总体排版" class="headerlink" title="总体排版"></a>总体排版</h1><h2 id="章节"><a href="#章节" class="headerlink" title="章节"></a>章节</h2>
+<h1 id="总体排版"><a href="#总体排版" class="headerlink" title="总体排版"></a>总体排版</h1><h2 id="章节"><a href="#章节" class="headerlink" title="章节"></a>章节</h2><img src="/2021/01/12/latex-study2/chapter.jpg" class="" title="章节层次">
 
 <p>\appendix 代表附录</p>
 <h2 id="页面"><a href="#页面" class="headerlink" title="页面"></a>页面</h2><p>页面设计需使用宏包’geometry’,例如：</p>
