@@ -464,7 +464,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    6 分
+                    5 分
                 </div>
                 
 
@@ -509,17 +509,10 @@
 
 \textbullet<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
  <img src="/2021/01/12/latex-study2/character.jpg" class="" title="文本中的特殊字符">
-<h1 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h1><pre><code>命令有两种类型：\命令&#123;文本&#125; ;&#123;\命令 文本&#125;。第二种一般用于局部环境中。
-预定义的字体族有三种，包括：罗马（\textrm&#123;&#125;;\rmfamily）；无衬线(\textsf&#123;&#125;;\sffamily)；打字机(\texttt&#123;&#125;;\ttfamily)。
-预定义的字体形状有四种，包括：直立（\textup&#123;&#125;;\upshape），意大利（\textit&#123;&#125;;\itshape），倾斜（\textsl&#123;&#125;;\slshape），小型大写（\textsc&#123;&#125;;\scshape）
-预定义的字体粗细，包括：中等（\textmd&#123;&#125;;\mdseries），加宽加粗（\textbf&#123;&#125;;\bfseries）
-
-还有部分特殊的命令如下：将字体设为普通（\textnormal;\normalfont）；倾斜校正，防止斜体与其他字挨的过近（命令\textit,\textsl能自动进行;也可用&#39;\/&#39;手动校正）
-
-对于中文字体：&#123;\CJKfamily&#123;字体的拼音&#125; &#125;  或&#123;\字体拼音&#125;
-
-对西文和数学支持最好的免费字体宏包为txfonts。
-</code></pre>
+<h1 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h1><p>命令有两种类型：\命令{文本} ;{\命令 文本}。第二种一般用于局部环境中。<br>预定义的字体族有三种，包括：罗马（\textrm{};\rmfamily）；无衬线(\textsf{};\sffamily)；打字机(\texttt{};\ttfamily)。<br>预定义的字体形状有四种，包括：直立（\textup{};\upshape），意大利（\textit{};\itshape），倾斜（\textsl{};\slshape），小型大写（\textsc{};\scshape）<br>预定义的字体粗细，包括：中等（\textmd{};\mdseries），加宽加粗（\textbf{};\bfseries）</p>
+<p>还有部分特殊的命令如下：将字体设为普通（\textnormal;\normalfont）；倾斜校正，防止斜体与其他字挨的过近（命令\textit,\textsl能自动进行;也可用’/‘手动校正）</p>
+<p>对于中文字体：{\CJKfamily{字体的拼音} }  或{\字体拼音}</p>
+<p>对西文和数学支持最好的免费字体宏包为txfonts。</p>
 <h2 id="强调文字"><a href="#强调文字" class="headerlink" title="强调文字"></a>强调文字</h2><p>\emph{};{\em }:将文字变为意大利体<br>\underline{}:加下划线<br>在CJKfntef宏包中，中文也有类似命令：\CJKunderdot(下加点)；\CJKunderline<br>；\CJKunderblline(加双下划线);CJKsout(删除线) 等</p>
 <h2 id="字号"><a href="#字号" class="headerlink" title="字号"></a>字号</h2><p>内置了十种大小：\tiny;\scriptsize;\footnotesize;\small;\normalsiza;\large;\Large;\LARGE;\huge;\Huge<br>对于中文也可用字号的命令声明：\zihao1{数字}。数字可选0-8，加个负号代表小（如小四） </p>
 <h1 id="行距与水平间距"><a href="#行距与水平间距" class="headerlink" title="行距与水平间距"></a>行距与水平间距</h1><h2 id="行距"><a href="#行距" class="headerlink" title="行距"></a>行距</h2><p>命令：\linespread{因子} 当因子为1时，为默认值：对于一般文档默认为1.2倍字体大小；对于中文字体，默认为1.3倍</p>
@@ -835,7 +828,7 @@
             tocSelector: '#toc-content',
             contentSelector: '#articleContent',
             headingsOffset: -($(window).height() * 0.4 - 45),
-            collapseDepth: Number('0'),
+            collapseDepth: Number('1'),
             headingSelector: 'h2, h3, h4'
         });
 

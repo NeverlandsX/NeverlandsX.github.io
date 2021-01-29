@@ -457,7 +457,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    380
+                    376
                 </div>
                 
 
@@ -485,16 +485,8 @@
                 <p>这篇是最后一篇，描述了图像与表格的插入。</p>
 <h1 id="制表"><a href="#制表" class="headerlink" title="制表"></a>制表</h1><p>一般采用tabular环境排版表格。同样的也是’\‘换行，’&amp;’换列，在行与行之间添加’\hline’代表加一横线。其具体使用格式为：</p>
 <pre class="line-numbers language-none"><code class="language-none">\begin&#123;tabular&#125;[垂直对齐]&#123;列格式说明&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<pre><code>垂直对齐参数:t   按表格顶部对齐；b   按表格底部对齐；默认   垂直居中
-
-列格式说明：要对每列进行说明(例：r|r代表两列都右对齐，中间有竖线）。
-r代表右对齐；
-l代表左对齐；
-c代表居中；
-p&#123;宽度&#125;代表固定列宽；
-@&#123;内容&#125;代表添加内容代替格子（可用于小数点对齐，当内容为小数点时）。
-|代表加竖线.
-</code></pre>
+<p>垂直对齐参数:t   按表格顶部对齐；b   按表格底部对齐；默认   垂直居中</p>
+<p>列格式说明：要对每列进行说明(例：r|r代表两列都右对齐，中间有竖线）。<br>r代表右对齐；<br>l代表左对齐；<br>c代表居中；<br>p{宽度}代表固定列宽；<br>@{内容}代表添加内容代替格子（可用于小数点对齐，当内容为小数点时）。<br>|代表加竖线.</p>
 <p>表格单元的合并：\multicolumn{项数}{新单元格式}{内容}</p>
 <p>划指定长度横线：\cline{起始列数-终止列数}</p>
 <p>三线表：使用booktabs宏包得到不同粗细的表格线：\toprule画顶部粗线；\midrule画中间细线;\bottomrule画底部粗线，\cmidlerule画中间很细（比midrule细）的分割线。</p>
@@ -770,7 +762,7 @@ p&#123;宽度&#125;代表固定列宽；
             tocSelector: '#toc-content',
             contentSelector: '#articleContent',
             headingsOffset: -($(window).height() * 0.4 - 45),
-            collapseDepth: Number('0'),
+            collapseDepth: Number('1'),
             headingSelector: 'h2, h3, h4'
         });
 
