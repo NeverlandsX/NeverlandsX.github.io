@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>Latex的学习（4）</title>
+      <link href="2021/01/21/latex-study4/"/>
+      <url>2021/01/21/latex-study4/</url>
+      
+        <content type="html"><![CDATA[<p>本章将介绍数学公式方面的使用。</p><a id="more"></a><p>行内公式：’$数学公式$’；’(数学公式)‘<br>行间公式：’[数学公式]‘；通过数学环境equation开辟空间</p><p>最通用的数学宏包为amsmath</p><p>使用’\text{}’在公式内插入文字,例如：</p><pre class="line-numbers language-none"><code class="language-none">$\text&#123;减数&#125;-\text&#123;numbers&#125;$<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>leqno(左侧编号);reqno(右侧编号);fleqn(固定缩进不局中)</p><p>上标：^{}<br>下标：_{}<br>举例：</p><pre class="line-numbers language-none"><code class="language-none">$A_i^k&#x3D;3^&#123;3^&#123;\cdot^&#123;\cdot^3&#125;&#125;&#125;$<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>算符的上下标一般默认在算符正上下方（除积分算符等个别算符在右上下角），也可使用’\nolimits’使其出现于角上（例：\nolimuts_biao），与之相对应的是’\limits’使其出现于正上下。<br>若有左侧上下标，使用mathtools宏包工具中的’\prescript{左上标}{左下标} 元素’。<br>对于化学式的书写采用mhchem宏包可简化书写：\ce{化学式或等式}。（化学式例：H20）</p><p>上划线：\overline{}<br>下划线：\underline{}</p><p>上左箭头：\overleftarrow{}<br>其他的箭头与上类似</p><p>上花括号：\overbrace{}<br>下花括号：\underbrace{}</p><p>分式：\frac{分子}{分母}<br>若写成’\frac 12’,则输出的是1/2</p><p>n次根式：\sqrt[n]{}</p><p>矩阵环境：分列用’&amp;’，分行用’\‘。横着的省略号用’\dots’，竖省略号用’\vdots’,斜着的省略号用’\ddots’。</p><p>在行内公式，如果要使用与字体方格相同高度的小矩阵，可以amsmath中的smallmatrix。<br>在求和符号的下限若有好几行，可用矩阵环境’\substack{}’输出单列的无括号矩阵，例</p><pre class="line-numbers language-none"><code class="language-none">\[ \sum_&#123;\substack&#123;0&lt;i&lt;n \\ 0&lt;j&lt;1&#125;&#125; \]<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>小写希腊字母：</p><p>大写希腊字母：</p><p>数学模式的重音：</p><p>二元关系算符：</p><p>大尺寸算符的表达：</p><p>其他符号:</p><p>定界符：\left括号 \right括号 （例：\left[  ）。可使括号随内容大小变化。</p><p>在euqation环境内是无法换行的，因此要改用gather环境才能用’\‘换行,也能通过’\notag’不进行编号计数。<br>multline环境：同样是可以换行的环境,但其第一行左对齐，中间的居中，最后一行右对齐。<br>split环境：可以自动拆分单个公式为多行，编号由整个公式环境产生。</p><p>cases环境：使用花括号表示几种不同情况。用’&amp;’分割条件与公式。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> latex </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> study </tag>
+            
+            <tag> latex </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Latex的学习（5）</title>
+      <link href="2021/01/21/latex-study5/"/>
+      <url>2021/01/21/latex-study5/</url>
+      
+        <content type="html"><![CDATA[<p>这篇是最后一篇，描述了图像与表格的插入。</p><a id="more"></a><h1 id="制表"><a href="#制表" class="headerlink" title="制表"></a>制表</h1><p>一般采用tabular环境排版表格。同样的也是’\‘换行，’&amp;’换列，在行与行之间添加’\hline’代表加一横线。其具体使用格式为：</p><pre class="line-numbers language-none"><code class="language-none">\begin&#123;tabular&#125;[垂直对齐]&#123;列格式说明&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><pre><code>垂直对齐参数:t   按表格顶部对齐；b   按表格底部对齐；默认   垂直居中列格式说明：要对每列进行说明(例：r|r代表两列都右对齐，中间有竖线）。r代表右对齐；l代表左对齐；c代表居中；p&#123;宽度&#125;代表固定列宽；@&#123;内容&#125;代表添加内容代替格子（可用于小数点对齐，当内容为小数点时）。|代表加竖线.</code></pre><p>表格单元的合并：\multicolumn{项数}{新单元格式}{内容}</p><p>划指定长度横线：\cline{起始列数-终止列数}</p><p>三线表：使用booktabs宏包得到不同粗细的表格线：\toprule画顶部粗线；\midrule画中间细线;\bottomrule画底部粗线，\cmidlerule画中间很细（比midrule细）的分割线。</p><h1 id="插图"><a href="#插图" class="headerlink" title="插图"></a>插图</h1><p>基本宏包为graphics或graphicx(下面以此为例)。<br>插图命令：\incliudegraphics[参数]{文件名}     参数内可填写高度，宽度，或旋转角度</p><h1 id="浮动体"><a href="#浮动体" class="headerlink" title="浮动体"></a>浮动体</h1><p>两种浮动环境：figure和table<br>例;</p><pre class="line-numbers language-none"><code class="language-none">\begin&#123;浮动环境&#125;&#123;允许位置&#125;\end&#123;&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p>允许位置（可按优先级填好几个）：h  此处；t  页面顶部；b  页面底部；p  独立一页</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> latex </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> study </tag>
+            
+            <tag> latex </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Latex的学习（3）</title>
+      <link href="2021/01/19/latex-study3/"/>
+      <url>2021/01/19/latex-study3/</url>
+      
+        <content type="html"><![CDATA[<p>参考了刘海洋的《Latex入门》，本篇介绍了Latex中的一些便捷的自动化工具的使用,在管理bib格式的数据库推荐开源软件JabRef。</p><a id="more"></a><h1 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h1><p>Latex能自动收集章节命令所定义的标题，用’\tableofcontents’输出，但要<strong>连续编译两遍</strong>。<br>一般使用第三方宏包’tocloft’和’titletoc’来修改目录的样式。</p><h1 id="交叉引用"><a href="#交叉引用" class="headerlink" title="交叉引用"></a>交叉引用</h1><p>交叉引用由两部分组成：定义标签和引用标签。<br>定义标签：是为了标识此处，以便后面引用，其命令为’\label{标签}’，标签的命名一般采用有意义的缩写(如’sec:lang’;’eq:lang’)，放置位置位于生成该对象命令（类似’\section,\item’）的后面，或者环境内部，或脚注内容内部，或者公式后方且’\‘前方。<br>引用标签：有两个命令: ‘\ref{标签}’和’\pageref{标签}’，前者引用的是标签的编号，后者引用的是标签所在页码。<br>利用宏包’hyperref’中的命令’\autoref’可以实现<strong>自动填写标签名称</strong>的功能，在另一方面，该宏包还提供了<strong>超链接</strong>的功能。<br>利用宏包’nameref’中的命令’\nameref’引用的是对象的<strong>标题名称</strong>。</p><h1 id="文献数据库"><a href="#文献数据库" class="headerlink" title="文献数据库"></a>文献数据库</h1><h2 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h2><p>Bibtex相当于用于处理文献数据库内容引用的处理器。能被bibtex处理的文献数据库是’.bib’格式的，一般期刊网站会提供这种引用格式，没必要自己输入。<br>    1. 在导言区内设定文献引用格式：\bibliographystyle{格式}’，基本的格式包括plain,unsrt,alpha,abbrv。其区别如下：</p><pre><code>2. 在正文中使用&#39;\cite&#123;&#125;&#39;引用文献或使用&#39;\nocite&#123;&#125;&#39;列出不引用还仍需列出的参考文献。3. 使用&#39;\bibliography&#123;数据库名称1,数据库名称2,...&#125;&#39;</code></pre><h2 id="文献格式的自定义"><a href="#文献格式的自定义" class="headerlink" title="文献格式的自定义"></a>文献格式的自定义</h2><p>通过宏包’natbib’来进行格式的定制。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> latex </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> study </tag>
+            
+            <tag> latex </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Latex的学习（2）</title>
+      <link href="2021/01/12/latex-study2/"/>
+      <url>2021/01/12/latex-study2/</url>
+      
+        <content type="html"><![CDATA[<pre><code>此篇参考了刘海洋的《Latex入门》和中国ctex用户小组翻译的《一份不太简短的latex2 介绍》。本篇介绍了在文本组织方面的知识。</code></pre><a id="more"></a><h1 id="特殊字母及字符"><a href="#特殊字母及字符" class="headerlink" title="特殊字母及字符"></a>特殊字母及字符</h1><pre><code>在Tex系统中已内置了部分的特殊字母输入方式，举个例子如：</code></pre><pre class="line-numbers language-none"><code class="language-none">caf\&#39;e \qquad G\&quot;odel \qquad Anton\&#39;in Dvo\v&#123;r&#125;\&#39;ak \qquad \O ster Vr\r&#123;a&#125; \qquad k\i rka\u&#123;g&#125;a\c&#123;c&#125;                 %注意有的特殊字母后面要加空格 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><pre><code>系统内默认的特殊字符的输入方式：</code></pre><pre><code>若是还要其他未覆盖的字母需要输入时，就要使用babel宏包，调用命令为</code></pre><pre class="line-numbers language-none"><code class="language-none">\usepackage[language]&#123;babel&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><pre><code>上述命令中的language需换成相应的语言名字（english等），[]内也可以填&#39;language2,language1&#39;,language1为默认语言,非默认语言使用需采用格式使用：</code></pre><pre class="line-numbers language-none"><code class="language-none">\textgreek&#123; &#125;                 %这个命令不能用XeLatex编译，会报错<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><pre><code>Latex中的双引号由两个单引号组成&#39;\,&#39;能产生一个很短的空格，可用于分开单引号与双引号.&#39;-&#39;为连字符；&#39;--&#39;用于表示数字范围,产生一个中等长度的杠；&#39;---&#39;形成一个破折号英文中的省略号由&#39;\ldots&#39;或&#39;dots&#39;产生，产生效果优于三个句号形成的省略号。对于一些在latex中存在特殊作用的符号（#，%，^等），若要输出，需要用如下方式：</code></pre><pre class="line-numbers language-none"><code class="language-none">\#    \$    \&amp;     \&#123;     \&#125;      \_     \textbackslash<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><pre><code>上面代码中的最后一个输出的是&#39;\&#39;。latex中任意多个空格仅起到一个空格作用；若宏命令由字母组成，则后面的空格不在文本中输出，若硬要输出空格在其后，应使用&#39;\ &#39;;若存在一种空格不允许被换行，使用&#39;~&#39;，像名称与编号之间。特殊符号：</code></pre><pre class="line-numbers language-none"><code class="language-none">\S \qquad \dag \qquad \ddag \qquad \P\copyright \qquad \textregistered \qquad \texttrademark \qquad \pounds\textbullet<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre> <h1 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h1><pre><code>命令有两种类型：\命令&#123;文本&#125; ;&#123;\命令 文本&#125;。第二种一般用于局部环境中。预定义的字体族有三种，包括：罗马（\textrm&#123;&#125;;\rmfamily）；无衬线(\textsf&#123;&#125;;\sffamily)；打字机(\texttt&#123;&#125;;\ttfamily)。预定义的字体形状有四种，包括：直立（\textup&#123;&#125;;\upshape），意大利（\textit&#123;&#125;;\itshape），倾斜（\textsl&#123;&#125;;\slshape），小型大写（\textsc&#123;&#125;;\scshape）预定义的字体粗细，包括：中等（\textmd&#123;&#125;;\mdseries），加宽加粗（\textbf&#123;&#125;;\bfseries）还有部分特殊的命令如下：将字体设为普通（\textnormal;\normalfont）；倾斜校正，防止斜体与其他字挨的过近（命令\textit,\textsl能自动进行;也可用&#39;\/&#39;手动校正）对于中文字体：&#123;\CJKfamily&#123;字体的拼音&#125; &#125;  或&#123;\字体拼音&#125;对西文和数学支持最好的免费字体宏包为txfonts。</code></pre><h2 id="强调文字"><a href="#强调文字" class="headerlink" title="强调文字"></a>强调文字</h2><pre><code>\emph&#123;&#125;;&#123;\em &#125;:将文字变为意大利体\underline&#123;&#125;:加下划线在CJKfntef宏包中，中文也有类似命令：\CJKunderdot(下加点)；\CJKunderline；\CJKunderblline(加双下划线);CJKsout(删除线) 等</code></pre><h2 id="字号"><a href="#字号" class="headerlink" title="字号"></a>字号</h2><pre><code>内置了十种大小：\tiny;\scriptsize;\footnotesize;\small;\normalsiza;\large;\Large;\LARGE;\huge;\Huge对于中文也可用字号的命令声明：\zihao1&#123;数字&#125;。数字可选0-8，加个负号代表小（如小四） </code></pre><h1 id="行距与水平间距"><a href="#行距与水平间距" class="headerlink" title="行距与水平间距"></a>行距与水平间距</h1><h2 id="行距"><a href="#行距" class="headerlink" title="行距"></a>行距</h2><pre><code>命令：\linespread&#123;因子&#125; 当因子为1时，为默认值：对于一般文档默认为1.2倍字体大小；对于中文字体，默认为1.3倍</code></pre><h2 id="水平间距"><a href="#水平间距" class="headerlink" title="水平间距"></a>水平间距</h2><pre><code>水平间距调整有两种，可以换行的与不可以换行的。(em代表代表一个大写M的宽度)不可以换行的：</code></pre><pre class="line-numbers language-none"><code class="language-none">\thinspace 或\,          0.1667em\negthinpace            -0.1667em\enspace                 0.5em\nobreakspace 或 ~       空格<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><p>可以换行的：</p><pre class="line-numbers language-none"><code class="language-none">\quad                    1em\qquad                   2em\enskip                  0.5em\空格                    空格<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><pre><code>使用&#39;\hspace&#123;长度&#125;&#39;可以指定具体长度如&#39;\hspace&#123;1cm&#125;&#39;也可使用&#39;\hspace&#123;&#125;&#39;产生可伸缩的橡皮长度:&#123;&#125;内的内容为：</code></pre><pre class="line-numbers language-none"><code class="language-none">&#123;普通长度 plus 可伸长长度 minus 可缩短长度&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><pre><code>\mbox&#123;&#125;或\makebox[宽度][对齐参数]&#123;&#125;:产生一个盒子，对齐参数可选：c(中)，l(左)，r(右),s(分散)；宽度要带单位</code></pre><h1 id="段落"><a href="#段落" class="headerlink" title="段落"></a>段落</h1><h2 id="对齐"><a href="#对齐" class="headerlink" title="对齐"></a>对齐</h2><pre><code>\raggedright ：左对齐\raggedleft  ：右对齐\centering   ：居中利用lettrine宏包可以产生首字下沉效果。具体命令为&#39;\lettrine&#123;字母&#125;&#39;</code></pre><h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><pre><code>环境包括:quote(单段引用，无缩进);quotation(多段引用，有缩进);verse(诗歌);abstract（摘要）……</code></pre><h3 id="列表环境"><a href="#列表环境" class="headerlink" title="列表环境"></a>列表环境</h3><pre><code>enumerate(编号的列表环境);itemize(不编号的列表环境);description(使用关键字的的列表环境)；列表环境的举例：</code></pre><pre class="line-numbers language-none"><code class="language-none">\begin&#123;enumerate&#125;    \item q    \item w    \begin&#123;itemize&#125;        \item m        \item n    \end&#123;itemize&#125;    \begin&#123;description&#125;        \item[g] j        \item[f] k    \end&#123;description&#125;\end&#123;enumerate&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>结果：</p><h3 id="定理类环境"><a href="#定理类环境" class="headerlink" title="定理类环境"></a>定理类环境</h3><pre><code>在导言区可以自定义一个定理环境：&#39;\newtheorem&#123;定理名字&#125;&#123;定理的抬头&#125;[计数器参数]&#39;，计数器参数可以为&#39;chapter&#39;，表示按章节编号。\theoremstyle&#123;格式&#125;可以用于选择定理格式，具体格式在此不一一列出。在正文就可以使用&#39;定理名字&#39;开辟自定义的定理环境。</code></pre><h3 id="抄录与代码环境"><a href="#抄录与代码环境" class="headerlink" title="抄录与代码环境"></a>抄录与代码环境</h3><pre><code>&#39;\verb符号 内容 符号&#39;：用自定义的符号来表示开始和结束大段的抄录可使用</code></pre><pre class="line-numbers language-none"><code class="language-none">\begin&#123;verbatim&#125;\end&#123;verbatim&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><pre><code>代码环境比抄录环境多了一个高亮的需求。需要使用宏包&#39;lstlistings&#39;使用如下：</code></pre><pre class="line-numbers language-none"><code class="language-none">\begin&#123;lstlistings&#125;[language&#x3D;语言]  %语言可填为&#39;C++&#39;等\end&#123;lstlistings&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><h3 id="制表环境"><a href="#制表环境" class="headerlink" title="制表环境"></a>制表环境</h3><pre><code>命令为:tabbing&#39;\\&#39;用于换行 &#39;\=&#39;用于设置指标位（相当于换列）&#39;\&gt;&#39;跳至下一格注意的是原本的重音表示被制表环境中命令覆盖，使用重音时应改为&#39;\a加原本命令&#39;。</code></pre><h3 id="脚注"><a href="#脚注" class="headerlink" title="脚注"></a>脚注</h3><pre><code>使用&#39;\footnote&#123;脚注&#125;&#39;产生自动编号的脚注。*在盒子与表格中不能直接使用，在环境中需使用&#39;\footnotemark[数字]&#39;产生编号和在环境后使用&#39;\footnotetext[数字]&#123;内容&#125;&#39;。*在标题中和图题中使用，如下&#39;\protect\footnote&#39;。</code></pre><h1 id="总体排版"><a href="#总体排版" class="headerlink" title="总体排版"></a>总体排版</h1><h2 id="章节"><a href="#章节" class="headerlink" title="章节"></a>章节</h2><pre><code>\appendix 代表附录</code></pre><h2 id="页面"><a href="#页面" class="headerlink" title="页面"></a>页面</h2><pre><code>页面设计需使用宏包&#39;geometry&#39;,例如：</code></pre><pre class="line-numbers language-none"><code class="language-none">\usepackage[a4paper,lesft&#x3D;3cm,right&#x3D;3cm]&#123;geometry&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> latex </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> study </tag>
+            
+            <tag> latex </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Latex的学习（1）</title>
+      <link href="2021/01/10/latex-study1/"/>
+      <url>2021/01/10/latex-study1/</url>
+      
+        <content type="html"><![CDATA[<pre><code>对Latex的学习主要参考了刘海洋的《Latex入门》，下面将用勾股定理的pdf进行实操。使用的软件是Visual Studio Code,通过LaTeX Workshop 插件来实现Latex。</code></pre><a id="more"></a><pre class="line-numbers language-none"><code class="language-none">\documentclass[UTF8]&#123;ctexart&#125;                %当命令的参数为可选参数时为[];否者为&#123;&#125;\newtheorem&#123;theorem&#125;&#123;Theorem&#125;                %提供theorem所需环境\usepackage&#123;graphicx&#125;                       %提供插入图片所需的宏包\usepackage&#123;float&#125;                          %提供不浮动table（表格）\usepackage&#123;amsmath&#125;                        %提供eqref所需环境\usepackage&#123;geometry&#125;                       %该包用于设计页面尺寸\geometry&#123;a6paper,centering,scale&#x3D;0.8&#125;      %纸张A6大小，版心居中，长宽占页面的0.8\usepackage[format&#x3D;hang,font&#x3D;small,textfont&#x3D;it]&#123;caption&#125;        %标题悬挂对齐（即编号向左突出），整体用小字号，标题文本用斜体（英文）&#x2F;楷书（汉字）\usepackage[nottoc]&#123;tocbibind&#125;              %在目录中加入包括目录，参考文献的所有标题，nottoc取消目录本身\newcommand\degree&#123;^\circ&#125;                %将命令^\circle用简单的degree代替%------------------------------------\title&#123; \heiti 杂谈勾股定理&#125;\author&#123; \kaishu Zhangsan\\Peking&#125;\date&#123;\today&#125;                                % \today 输出的是电脑的当日的时期%以上信息仅是对文章信息提前申明，得通过\maketitle输出，maketitle的输出格式是固定的%  &#x2F;是转义字符；&#x2F;&#x2F;为换行\bibliographystyle&#123;plain&#125;                     % \bibliographystyle 声明参考文献格式% \begin 以上部分都称为导言区（premble）%\begin 与 \end 之间为pdf的输出内容\begin&#123;document&#125;\maketitle                                     %输出文章信息(前文定义的)\begin&#123;abstract&#125;    这是一篇勾股定理的小短文。                   %摘要在abstract环境中生成\end&#123;abstract&#125;\tableofcontents                               %输出目录\section&#123;勾股定理在古代&#125;                           %开始新一节,自动排序西方称勾股定理为毕达哥拉斯定理 \cite&#123;Kline&#125;，将其发  现归功于公元前 6 世纪的毕达哥拉斯学派。该定理的严格证明见于欧几里德\footnote&#123;欧几里得，约公元前 330--275 年。&#125; 的《几何原本》的命题 47。   %数字前后加空格，汉字前后的空格等于没有；段前无需缩进，自动缩进；中间空出一行，代表分段。%&#39; \footnote&#123;&#125; &#39;为脚注命令，花括号内为脚注内容我国《周髀算经》载商高（约公元前 12 世纪）答周公问：\begin&#123;quote&#125;                                     %使用quote环境进行引用以突出引用内容    \zihao&#123;-5&#125;\kaishu 勾广三，股修四，径隅五。      % &#39;\zihao&#123;-5&#125;&#39; 为小5号;&#39;\kaishu&#39; 为楷书\end&#123;quote&#125;又载陈子（约公元前 7--6 世纪）答问：……              %&#39;--&#39;表示一个宽度与n相当的短划线图\ref&#123;fig:xiantu&#125;是我国古代对勾股定理的一种证明 \cite&#123;quanjing&#125;。          %通过\ref&#123;&#125;自动显示图的序号\begin&#123;figure&#125;[ht]                                      %figure是指图片可以自适应浮动的环境吗，ht表示可以出现页面顶部和底部    \centering                                          %&#39;\centering&#39; 表示后面内容居中    \includegraphics[width&#x3D;3cm]&#123;xian.jpeg&#125;    \caption&#123;宋赵爽在《周髀算经》注中所做的弦图，给出了一个极具对称美的证明。&#125;          %&#39;\caption&#123;&#125;&#39; 能给出标题，并自动编号    \label&#123;fig:xiantu&#125;                                  %定义一个标签，以便方便引用\end&#123;figure&#125;\section&#123;勾股定理的近代形式&#125;\begin&#123;theorem&#125;[勾股定理]                        %使用theorem环境来写定理    直角三角形斜边的平方等于两腰的平方和。    可以用符号语言表述为：设直角三角形$ABC$ ,其中\angle C&#x3D; $90\degree$ ,则有         % $内容$ 表示里面的内容用公式格式，被称为行内公式    \begin&#123;equation&#125;\label&#123;eq:gougu&#125;                                            %用label定义公式标签方便提及公式        AB^2&#x3D;BC^2+AC^2.                                                         %采用了equation 环境，此种为列表公式    \end&#123;equation&#125;\end&#123;theorem&#125;满足式 \eqref&#123;eq:gougu&#125; 的整数称为\emph&#123;勾股数&#125;，下表列出了一些较小的勾股数：                   %&#39;\emph&#123;&#125;&#39; 表强调，通过\eqref&#123;&#125;自动显示公式序号\begin&#123;table&#125;[H]                                        %table提供的是浮动表格环境，但[H]使其固定\begin&#123;tabular&#125;&#123;|rrr|&#125;                                  %tabular提供制表环境，&#39;|rrr|&#39;示右对齐,有三列，表格两侧有两条竖线    \hline    直角边 $a$ &amp; 直角边 $b$ &amp; 斜边 $c$ \\                   %&#39;\hline&#39;表示画出一条横线；\\表示换行；列之间用&amp;隔开    \hline            3 &amp; 4 &amp; 5 \\            5 &amp; 12 &amp; 13 \\    \hline\end&#123;tabular&#125;%                                          %&#39;%&#39;取消换行\qquad                                                  %产生两个M宽度的间隔($a^2 + b^2 &#x3D; c^2$)\end&#123;table&#125;\nocite&#123;Shiye&#125;\bibliography&#123;math&#125;                                       %从文献数据库math(该数据库通过JabRef软件得到)中获取文献信息，输出的.bib文件放在相同目录中\end&#123;document&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>编译需选择下图中圈出的选项：</p><p><strong>这就是完成后的效果！</strong></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> latex </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> study </tag>
+            
+            <tag> latex </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>
